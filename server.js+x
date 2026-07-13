@@ -1,0 +1,31 @@
+const express = require("express");
+
+const app = express();
+const PORT = 3000;
+
+const wallet = "TJe8Dyt3kNNTsaz1N9DTMULWobhQZVnV1j";
+const amount = 10;
+
+app.use(express.static("public"));
+
+app.get("/", (req, res) => {
+  res.redirect("/login.html");
+});
+
+app.get("/wallet", (req, res) => {
+  res.json({
+    network: "TRC20",
+    currency: "USDT",
+    address: wallet,
+    amount: amount
+  });
+});
+
+app.listen(PORT, () => {
+  console.log("================================");
+  console.log(" USDT APP STARTED SUCCESSFULLY ");
+  console.log("================================");
+  console.log("Open:");
+  console.log("http://localhost:3000");
+});
+

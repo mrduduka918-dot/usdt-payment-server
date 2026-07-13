@@ -1,0 +1,487 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.17.0
+2 info using node@v26.3.1
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/.npmrc
+5 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+6 verbose title npm instal tronweb
+7 verbose argv "instal" "tronweb"
+8 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2026-07-11T04_37_35_166Z-
+9 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2026-07-11T04_37_35_166Z-debug-0.log
+10 silly logfile done cleaning log files
+11 silly packumentCache heap:1084227584 maxSize:271056896 maxEntrySize:135528448
+12 silly idealTree buildDeps
+13 silly fetch manifest tronweb@*
+14 silly packumentCache full:https://registry.npmjs.org/tronweb cache-miss
+15 http fetch GET 200 https://registry.npmjs.org/tronweb 990ms (cache miss)
+16 silly packumentCache full:https://registry.npmjs.org/tronweb set size:undefined disposed:false
+17 silly placeDep ROOT tronweb@6.4.0 OK for:  want: *
+18 silly fetch manifest @babel/runtime@7.26.10
+19 silly packumentCache full:https://registry.npmjs.org/@babel%2fruntime cache-miss
+20 silly fetch manifest axios@1.18.0
+21 silly packumentCache full:https://registry.npmjs.org/axios cache-miss
+22 silly fetch manifest bignumber.js@9.1.2
+23 silly packumentCache full:https://registry.npmjs.org/bignumber.js cache-miss
+24 silly fetch manifest ethereum-cryptography@2.2.1
+25 silly packumentCache full:https://registry.npmjs.org/ethereum-cryptography cache-miss
+26 silly fetch manifest ethers@6.13.5
+27 silly packumentCache full:https://registry.npmjs.org/ethers cache-miss
+28 silly fetch manifest eventemitter3@5.0.1
+29 silly packumentCache full:https://registry.npmjs.org/eventemitter3 cache-miss
+30 silly fetch manifest google-protobuf@3.21.4
+31 silly packumentCache full:https://registry.npmjs.org/google-protobuf cache-miss
+32 http fetch GET 200 https://registry.npmjs.org/axios 556ms (cache miss)
+33 silly packumentCache full:https://registry.npmjs.org/axios set size:undefined disposed:false
+34 silly fetch manifest semver@7.7.1
+35 silly packumentCache full:https://registry.npmjs.org/semver cache-miss
+36 http fetch GET 200 https://registry.npmjs.org/eventemitter3 762ms (cache miss)
+37 silly packumentCache full:https://registry.npmjs.org/eventemitter3 set size:undefined disposed:false
+38 silly fetch manifest validator@13.15.23
+39 silly packumentCache full:https://registry.npmjs.org/validator cache-miss
+40 http fetch GET 200 https://registry.npmjs.org/bignumber.js 807ms (cache miss)
+41 silly packumentCache full:https://registry.npmjs.org/bignumber.js set size:undefined disposed:false
+42 http fetch GET 200 https://registry.npmjs.org/ethereum-cryptography 832ms (cache miss)
+43 silly packumentCache full:https://registry.npmjs.org/ethereum-cryptography set size:undefined disposed:false
+44 http fetch GET 200 https://registry.npmjs.org/google-protobuf 857ms (cache miss)
+45 silly packumentCache full:https://registry.npmjs.org/google-protobuf set size:undefined disposed:false
+46 http fetch GET 200 https://registry.npmjs.org/ethers 944ms (cache miss)
+47 silly packumentCache full:https://registry.npmjs.org/ethers set size:undefined disposed:false
+48 http fetch GET 200 https://registry.npmjs.org/@babel%2fruntime 1105ms (cache miss)
+49 silly packumentCache full:https://registry.npmjs.org/@babel%2fruntime set size:undefined disposed:false
+50 http fetch GET 200 https://registry.npmjs.org/semver 702ms (cache miss)
+51 silly packumentCache full:https://registry.npmjs.org/semver set size:undefined disposed:false
+52 http fetch GET 200 https://registry.npmjs.org/validator 687ms (cache miss)
+53 silly packumentCache full:https://registry.npmjs.org/validator set size:undefined disposed:false
+54 silly placeDep ROOT @babel/runtime@7.26.10 OK for: tronweb@6.4.0 want: 7.26.10
+55 silly placeDep ROOT axios@1.18.0 OK for: tronweb@6.4.0 want: 1.18.0
+56 silly placeDep ROOT bignumber.js@9.1.2 OK for: tronweb@6.4.0 want: 9.1.2
+57 silly placeDep ROOT ethereum-cryptography@2.2.1 OK for: tronweb@6.4.0 want: 2.2.1
+58 silly placeDep ROOT ethers@6.13.5 OK for: tronweb@6.4.0 want: 6.13.5
+59 silly placeDep ROOT eventemitter3@5.0.1 OK for: tronweb@6.4.0 want: 5.0.1
+60 silly placeDep ROOT google-protobuf@3.21.4 OK for: tronweb@6.4.0 want: 3.21.4
+61 silly placeDep ROOT semver@7.7.1 OK for: tronweb@6.4.0 want: 7.7.1
+62 silly placeDep ROOT validator@13.15.23 OK for: tronweb@6.4.0 want: 13.15.23
+63 silly fetch manifest regenerator-runtime@^0.14.0
+64 silly packumentCache full:https://registry.npmjs.org/regenerator-runtime cache-miss
+65 silly fetch manifest form-data@^4.0.5
+66 silly packumentCache full:https://registry.npmjs.org/form-data cache-miss
+67 silly fetch manifest proxy-from-env@^2.1.0
+68 silly packumentCache full:https://registry.npmjs.org/proxy-from-env cache-miss
+69 silly fetch manifest follow-redirects@^1.16.0
+70 silly packumentCache full:https://registry.npmjs.org/follow-redirects cache-miss
+71 silly fetch manifest https-proxy-agent@^5.0.1
+72 silly packumentCache full:https://registry.npmjs.org/https-proxy-agent cache-miss
+73 silly fetch manifest @scure/bip32@1.4.0
+74 silly packumentCache full:https://registry.npmjs.org/@scure%2fbip32 cache-miss
+75 silly fetch manifest @scure/bip39@1.3.0
+76 silly packumentCache full:https://registry.npmjs.org/@scure%2fbip39 cache-miss
+77 http fetch GET 200 https://registry.npmjs.org/follow-redirects 174ms (cache miss)
+78 silly packumentCache full:https://registry.npmjs.org/follow-redirects set size:undefined disposed:false
+79 silly fetch manifest @noble/curves@1.4.2
+80 silly packumentCache full:https://registry.npmjs.org/@noble%2fcurves cache-miss
+81 http fetch GET 200 https://registry.npmjs.org/proxy-from-env 358ms (cache miss)
+82 silly packumentCache full:https://registry.npmjs.org/proxy-from-env set size:undefined disposed:false
+83 silly fetch manifest @noble/hashes@1.4.0
+84 silly packumentCache full:https://registry.npmjs.org/@noble%2fhashes cache-miss
+85 http fetch GET 200 https://registry.npmjs.org/regenerator-runtime 370ms (cache miss)
+86 silly packumentCache full:https://registry.npmjs.org/regenerator-runtime set size:undefined disposed:false
+87 silly fetch manifest ws@8.17.1
+88 silly packumentCache full:https://registry.npmjs.org/ws cache-miss
+89 http fetch GET 200 https://registry.npmjs.org/https-proxy-agent 406ms (cache miss)
+90 silly packumentCache full:https://registry.npmjs.org/https-proxy-agent set size:undefined disposed:false
+91 silly fetch manifest tslib@2.7.0
+92 silly packumentCache full:https://registry.npmjs.org/tslib cache-miss
+93 http fetch GET 200 https://registry.npmjs.org/form-data 433ms (cache miss)
+94 silly packumentCache full:https://registry.npmjs.org/form-data set size:undefined disposed:false
+95 silly fetch manifest aes-js@4.0.0-beta.5
+96 silly packumentCache full:https://registry.npmjs.org/aes-js cache-miss
+97 http fetch GET 200 https://registry.npmjs.org/@scure%2fbip32 984ms (cache miss)
+98 silly packumentCache full:https://registry.npmjs.org/@scure%2fbip32 set size:undefined disposed:false
+99 silly fetch manifest @types/node@22.7.5
+100 silly packumentCache full:https://registry.npmjs.org/@types%2fnode cache-miss
+101 http fetch GET 200 https://registry.npmjs.org/ws 746ms (cache miss)
+102 silly packumentCache full:https://registry.npmjs.org/ws set size:undefined disposed:false
+103 silly fetch manifest @noble/curves@1.2.0
+104 silly packumentCache full:https://registry.npmjs.org/@noble%2fcurves cache-miss
+105 http fetch GET 200 https://registry.npmjs.org/tslib 734ms (cache miss)
+106 silly packumentCache full:https://registry.npmjs.org/tslib set size:undefined disposed:false
+107 silly fetch manifest @noble/hashes@1.3.2
+108 silly packumentCache full:https://registry.npmjs.org/@noble%2fhashes cache-miss
+109 http fetch GET 200 https://registry.npmjs.org/@scure%2fbip39 1173ms (cache miss)
+110 silly packumentCache full:https://registry.npmjs.org/@scure%2fbip39 set size:undefined disposed:false
+111 silly fetch manifest @adraffy/ens-normalize@1.10.1
+112 silly packumentCache full:https://registry.npmjs.org/@adraffy%2fens-normalize cache-miss
+113 http fetch GET 200 https://registry.npmjs.org/aes-js 911ms (cache miss)
+114 silly packumentCache full:https://registry.npmjs.org/aes-js set size:undefined disposed:false
+115 http fetch GET 200 https://registry.npmjs.org/@noble%2fcurves 1311ms (cache miss)
+116 silly packumentCache full:https://registry.npmjs.org/@noble%2fcurves set size:undefined disposed:false
+117 http fetch GET 200 https://registry.npmjs.org/@noble%2fhashes 1559ms (cache miss)
+118 silly packumentCache full:https://registry.npmjs.org/@noble%2fhashes set size:undefined disposed:false
+119 http fetch GET 200 https://registry.npmjs.org/@noble%2fhashes 881ms (cache miss)
+120 silly packumentCache full:https://registry.npmjs.org/@noble%2fhashes set size:undefined disposed:false
+121 http fetch GET 200 https://registry.npmjs.org/@noble%2fcurves 932ms (cache miss)
+122 silly packumentCache full:https://registry.npmjs.org/@noble%2fcurves set size:undefined disposed:false
+123 http fetch GET 200 https://registry.npmjs.org/@adraffy%2fens-normalize 1672ms (cache miss)
+124 silly packumentCache full:https://registry.npmjs.org/@adraffy%2fens-normalize set size:undefined disposed:false
+125 http fetch GET 200 https://registry.npmjs.org/@types%2fnode 2834ms (cache miss)
+126 silly packumentCache full:https://registry.npmjs.org/@types%2fnode set size:undefined disposed:false
+127 silly placeDep ROOT regenerator-runtime@0.14.1 OK for: @babel/runtime@7.26.10 want: ^0.14.0
+128 silly placeDep ROOT follow-redirects@1.16.0 OK for: axios@1.18.0 want: ^1.16.0
+129 silly placeDep ROOT form-data@4.0.6 OK for: axios@1.18.0 want: ^4.0.5
+130 silly placeDep ROOT https-proxy-agent@5.0.1 OK for: axios@1.18.0 want: ^5.0.1
+131 silly placeDep ROOT proxy-from-env@2.1.0 OK for: axios@1.18.0 want: ^2.1.0
+132 silly fetch manifest asynckit@^0.4.0
+133 silly packumentCache full:https://registry.npmjs.org/asynckit cache-miss
+134 silly fetch manifest mime-types@^2.1.35
+135 silly packumentCache full:https://registry.npmjs.org/mime-types cache-miss
+136 silly fetch manifest combined-stream@^1.0.8
+137 silly packumentCache full:https://registry.npmjs.org/combined-stream cache-miss
+138 silly fetch manifest es-set-tostringtag@^2.1.0
+139 silly packumentCache full:https://registry.npmjs.org/es-set-tostringtag cache-miss
+140 silly fetch manifest agent-base@6
+141 silly packumentCache full:https://registry.npmjs.org/agent-base cache-miss
+142 http fetch GET 200 https://registry.npmjs.org/asynckit 197ms (cache miss)
+143 silly packumentCache full:https://registry.npmjs.org/asynckit set size:undefined disposed:false
+144 http fetch GET 200 https://registry.npmjs.org/combined-stream 197ms (cache miss)
+145 silly packumentCache full:https://registry.npmjs.org/combined-stream set size:undefined disposed:false
+146 http fetch GET 200 https://registry.npmjs.org/mime-types 211ms (cache revalidated)
+147 silly packumentCache full:https://registry.npmjs.org/mime-types set size:139110 disposed:false
+148 http fetch GET 200 https://registry.npmjs.org/agent-base 226ms (cache miss)
+149 silly packumentCache full:https://registry.npmjs.org/agent-base set size:undefined disposed:false
+150 http fetch GET 200 https://registry.npmjs.org/es-set-tostringtag 394ms (cache miss)
+151 silly packumentCache full:https://registry.npmjs.org/es-set-tostringtag set size:undefined disposed:false
+152 silly placeDep ROOT @noble/curves@1.4.2 OK for: ethereum-cryptography@2.2.1 want: 1.4.2
+153 silly placeDep ROOT @noble/hashes@1.4.0 OK for: ethereum-cryptography@2.2.1 want: 1.4.0
+154 silly placeDep ROOT @scure/bip32@1.4.0 OK for: ethereum-cryptography@2.2.1 want: 1.4.0
+155 silly placeDep ROOT @scure/bip39@1.3.0 OK for: ethereum-cryptography@2.2.1 want: 1.3.0
+156 silly fetch manifest @scure/base@~1.1.6
+157 silly packumentCache full:https://registry.npmjs.org/@scure%2fbase cache-miss
+158 silly fetch manifest @scure/base@~1.1.6
+159 silly packumentCache full:https://registry.npmjs.org/@scure%2fbase cache-miss
+160 http fetch GET 200 https://registry.npmjs.org/@scure%2fbase 904ms (cache miss)
+161 silly packumentCache full:https://registry.npmjs.org/@scure%2fbase set size:undefined disposed:false
+162 http fetch GET 200 https://registry.npmjs.org/@scure%2fbase 910ms (cache miss)
+163 silly packumentCache full:https://registry.npmjs.org/@scure%2fbase set size:undefined disposed:false
+164 silly placeDep ROOT @scure/base@1.1.9 OK for: @scure/bip32@1.4.0 want: ~1.1.6
+165 silly fetch manifest bufferutil@^4.0.1
+166 silly packumentCache full:https://registry.npmjs.org/bufferutil cache-miss
+167 http fetch GET 200 https://registry.npmjs.org/bufferutil 120ms (cache miss)
+168 silly packumentCache full:https://registry.npmjs.org/bufferutil set size:undefined disposed:false
+169 silly fetch manifest utf-8-validate@>=5.0.2
+170 silly packumentCache full:https://registry.npmjs.org/utf-8-validate cache-miss
+171 http fetch GET 200 https://registry.npmjs.org/utf-8-validate 101ms (cache miss)
+172 silly packumentCache full:https://registry.npmjs.org/utf-8-validate set size:undefined disposed:false
+173 silly placeDep ROOT @adraffy/ens-normalize@1.10.1 OK for: ethers@6.13.5 want: 1.10.1
+174 silly placeDep node_modules/ethers @noble/curves@1.2.0 OK for: ethers@6.13.5 want: 1.2.0
+175 silly placeDep node_modules/ethers @noble/hashes@1.3.2 OK for: ethers@6.13.5 want: 1.3.2
+176 silly placeDep ROOT @types/node@22.7.5 OK for: ethers@6.13.5 want: 22.7.5
+177 silly placeDep ROOT aes-js@4.0.0-beta.5 OK for: ethers@6.13.5 want: 4.0.0-beta.5
+178 silly placeDep ROOT tslib@2.7.0 OK for: ethers@6.13.5 want: 2.7.0
+179 silly placeDep ROOT ws@8.17.1 OK for: ethers@6.13.5 want: 8.17.1
+180 silly fetch manifest undici-types@~6.19.2
+181 silly packumentCache full:https://registry.npmjs.org/undici-types cache-miss
+182 http fetch GET 200 https://registry.npmjs.org/undici-types 145ms (cache miss)
+183 silly packumentCache full:https://registry.npmjs.org/undici-types set size:undefined disposed:false
+184 silly placeDep ROOT undici-types@6.19.8 OK for: @types/node@22.7.5 want: ~6.19.2
+185 silly placeDep ROOT asynckit@0.4.0 OK for: form-data@4.0.6 want: ^0.4.0
+186 silly placeDep ROOT combined-stream@1.0.8 OK for: form-data@4.0.6 want: ^1.0.8
+187 silly placeDep ROOT es-set-tostringtag@2.1.0 OK for: form-data@4.0.6 want: ^2.1.0
+188 silly placeDep node_modules/form-data mime-types@2.1.35 OK for: form-data@4.0.6 want: ^2.1.35
+189 silly fetch manifest delayed-stream@~1.0.0
+190 silly packumentCache full:https://registry.npmjs.org/delayed-stream cache-miss
+191 silly fetch manifest has-tostringtag@^1.0.2
+192 silly packumentCache full:https://registry.npmjs.org/has-tostringtag cache-miss
+193 silly fetch manifest mime-db@1.52.0
+194 silly packumentCache full:https://registry.npmjs.org/mime-db cache-miss
+195 http fetch GET 200 https://registry.npmjs.org/mime-db 145ms (cache revalidated)
+196 silly packumentCache full:https://registry.npmjs.org/mime-db set size:164953 disposed:false
+197 http fetch GET 200 https://registry.npmjs.org/has-tostringtag 175ms (cache miss)
+198 silly packumentCache full:https://registry.npmjs.org/has-tostringtag set size:undefined disposed:false
+199 http fetch GET 200 https://registry.npmjs.org/delayed-stream 360ms (cache miss)
+200 silly packumentCache full:https://registry.npmjs.org/delayed-stream set size:undefined disposed:false
+201 silly placeDep ROOT delayed-stream@1.0.0 OK for: combined-stream@1.0.8 want: ~1.0.0
+202 silly placeDep ROOT has-tostringtag@1.0.2 OK for: es-set-tostringtag@2.1.0 want: ^1.0.2
+203 silly placeDep ROOT agent-base@6.0.2 OK for: https-proxy-agent@5.0.1 want: 6
+204 silly placeDep node_modules/form-data mime-db@1.52.0 OK for: mime-types@2.1.35 want: 1.52.0
+205 silly reify moves {}
+206 silly audit bulk request {
+206 silly audit   accepts: [ '2.0.0' ],
+206 silly audit   'body-parser': [ '2.3.0' ],
+206 silly audit   'content-type': [ '2.0.0', '1.0.5' ],
+206 silly audit   bytes: [ '3.1.2' ],
+206 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+206 silly audit   'call-bound': [ '1.0.4' ],
+206 silly audit   'content-disposition': [ '1.1.0' ],
+206 silly audit   cookie: [ '0.7.2' ],
+206 silly audit   'cookie-signature': [ '1.2.2' ],
+206 silly audit   debug: [ '4.4.3' ],
+206 silly audit   depd: [ '2.0.0' ],
+206 silly audit   'dunder-proto': [ '1.0.1' ],
+206 silly audit   'ee-first': [ '1.1.1' ],
+206 silly audit   encodeurl: [ '2.0.0' ],
+206 silly audit   'es-define-property': [ '1.0.1' ],
+206 silly audit   'es-errors': [ '1.3.0' ],
+206 silly audit   'es-object-atoms': [ '1.1.2' ],
+206 silly audit   'escape-html': [ '1.0.3' ],
+206 silly audit   etag: [ '1.8.1' ],
+206 silly audit   express: [ '5.2.1' ],
+206 silly audit   finalhandler: [ '2.1.1' ],
+206 silly audit   forwarded: [ '0.2.0' ],
+206 silly audit   fresh: [ '2.0.0' ],
+206 silly audit   'function-bind': [ '1.1.2' ],
+206 silly audit   'get-intrinsic': [ '1.3.0' ],
+206 silly audit   'get-proto': [ '1.0.1' ],
+206 silly audit   gopd: [ '1.2.0' ],
+206 silly audit   'has-symbols': [ '1.1.0' ],
+206 silly audit   hasown: [ '2.0.4' ],
+206 silly audit   'http-errors': [ '2.0.1' ],
+206 silly audit   'iconv-lite': [ '0.7.3' ],
+206 silly audit   inherits: [ '2.0.4' ],
+206 silly audit   'ipaddr.js': [ '1.9.1' ],
+206 silly audit   'is-promise': [ '4.0.0' ],
+206 silly audit   'math-intrinsics': [ '1.1.0' ],
+206 silly audit   'media-typer': [ '1.1.0' ],
+206 silly audit   'merge-descriptors': [ '2.0.0' ],
+206 silly audit   'mime-db': [ '1.54.0', '1.52.0' ],
+206 silly audit   'mime-types': [ '3.0.2', '2.1.35' ],
+206 silly audit   ms: [ '2.1.3' ],
+206 silly audit   negotiator: [ '1.0.0' ],
+206 silly audit   'object-inspect': [ '1.13.4' ],
+206 silly audit   'on-finished': [ '2.4.1' ],
+206 silly audit   once: [ '1.4.0' ],
+206 silly audit   parseurl: [ '1.3.3' ],
+206 silly audit   'path-to-regexp': [ '8.4.2' ],
+206 silly audit   'proxy-addr': [ '2.0.7' ],
+206 silly audit   qs: [ '6.15.3' ],
+206 silly audit   'range-parser': [ '1.3.0' ],
+206 silly audit   'raw-body': [ '3.0.2' ],
+206 silly audit   router: [ '2.2.0' ],
+206 silly audit   'safer-buffer': [ '2.1.2' ],
+206 silly audit   send: [ '1.2.1' ],
+206 silly audit   'serve-static': [ '2.2.1' ],
+206 silly audit   setprototypeof: [ '1.2.0' ],
+206 silly audit   'side-channel': [ '1.1.1' ],
+206 silly audit   'side-channel-list': [ '1.0.1' ],
+206 silly audit   'side-channel-map': [ '1.0.1' ],
+206 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+206 silly audit   statuses: [ '2.0.2' ],
+206 silly audit   toidentifier: [ '1.0.1' ],
+206 silly audit   'type-is': [ '2.1.0' ],
+206 silly audit   unpipe: [ '1.0.0' ],
+206 silly audit   vary: [ '1.1.2' ],
+206 silly audit   wrappy: [ '1.0.2' ],
+206 silly audit   tronweb: [ '6.4.0' ],
+206 silly audit   '@babel/runtime': [ '7.26.10' ],
+206 silly audit   axios: [ '1.18.0' ],
+206 silly audit   'bignumber.js': [ '9.1.2' ],
+206 silly audit   'ethereum-cryptography': [ '2.2.1' ],
+206 silly audit   ethers: [ '6.13.5' ],
+206 silly audit   eventemitter3: [ '5.0.1' ],
+206 silly audit   'google-protobuf': [ '3.21.4' ],
+206 silly audit   semver: [ '7.7.1' ],
+206 silly audit   validator: [ '13.15.23' ],
+206 silly audit   'regenerator-runtime': [ '0.14.1' ],
+206 silly audit   'follow-redirects': [ '1.16.0' ],
+206 silly audit   'form-data': [ '4.0.6' ],
+206 silly audit   'https-proxy-agent': [ '5.0.1' ],
+206 silly audit   'proxy-from-env': [ '2.1.0' ],
+206 silly audit   '@noble/curves': [ '1.4.2', '1.2.0' ],
+206 silly audit   '@noble/hashes': [ '1.4.0', '1.3.2' ],
+206 silly audit   '@scure/bip32': [ '1.4.0' ],
+206 silly audit   '@scure/bip39': [ '1.3.0' ],
+206 silly audit   '@scure/base': [ '1.1.9' ],
+206 silly audit   '@adraffy/ens-normalize': [ '1.10.1' ],
+206 silly audit   '@types/node': [ '22.7.5' ],
+206 silly audit   'aes-js': [ '4.0.0-beta.5' ],
+206 silly audit   tslib: [ '2.7.0' ],
+206 silly audit   ws: [ '8.17.1' ],
+206 silly audit   'undici-types': [ '6.19.8' ],
+206 silly audit   asynckit: [ '0.4.0' ],
+206 silly audit   'combined-stream': [ '1.0.8' ],
+206 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+206 silly audit   'delayed-stream': [ '1.0.0' ],
+206 silly audit   'has-tostringtag': [ '1.0.2' ],
+206 silly audit   'agent-base': [ '6.0.2' ]
+206 silly audit }
+207 http cache agent-base@https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz 0ms (cache hit)
+208 http cache has-tostringtag@https://registry.npmjs.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz 0ms (cache hit)
+209 http cache delayed-stream@https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz 0ms (cache hit)
+210 http cache es-set-tostringtag@https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz 0ms (cache hit)
+211 http cache combined-stream@https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz 0ms (cache hit)
+212 http cache asynckit@https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz 0ms (cache hit)
+213 http cache tslib@https://registry.npmjs.org/tslib/-/tslib-2.7.0.tgz 0ms (cache hit)
+214 http cache ws@https://registry.npmjs.org/ws/-/ws-8.17.1.tgz 0ms (cache hit)
+215 http cache undici-types@https://registry.npmjs.org/undici-types/-/undici-types-6.19.8.tgz 0ms (cache hit)
+216 http cache aes-js@https://registry.npmjs.org/aes-js/-/aes-js-4.0.0-beta.5.tgz 0ms (cache hit)
+217 http cache @types/node@https://registry.npmjs.org/@types/node/-/node-22.7.5.tgz 0ms (cache hit)
+218 http cache @scure/base@https://registry.npmjs.org/@scure/base/-/base-1.1.9.tgz 0ms (cache hit)
+219 http cache @adraffy/ens-normalize@https://registry.npmjs.org/@adraffy/ens-normalize/-/ens-normalize-1.10.1.tgz 0ms (cache hit)
+220 http cache @scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.3.0.tgz 0ms (cache hit)
+221 http cache @scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.4.0.tgz 1ms (cache hit)
+222 http cache @noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.4.0.tgz 0ms (cache hit)
+223 http cache @noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.4.2.tgz 1ms (cache hit)
+224 http cache proxy-from-env@https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-2.1.0.tgz 0ms (cache hit)
+225 http cache form-data@https://registry.npmjs.org/form-data/-/form-data-4.0.6.tgz 0ms (cache hit)
+226 http cache https-proxy-agent@https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz 0ms (cache hit)
+227 http cache follow-redirects@https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.16.0.tgz 0ms (cache hit)
+228 http cache regenerator-runtime@https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz 0ms (cache hit)
+229 http cache validator@https://registry.npmjs.org/validator/-/validator-13.15.23.tgz 0ms (cache hit)
+230 http cache semver@https://registry.npmjs.org/semver/-/semver-7.7.1.tgz 0ms (cache hit)
+231 http cache google-protobuf@https://registry.npmjs.org/google-protobuf/-/google-protobuf-3.21.4.tgz 0ms (cache hit)
+232 http cache eventemitter3@https://registry.npmjs.org/eventemitter3/-/eventemitter3-5.0.1.tgz 0ms (cache hit)
+233 http cache ethers@https://registry.npmjs.org/ethers/-/ethers-6.13.5.tgz 0ms (cache hit)
+234 http cache bignumber.js@https://registry.npmjs.org/bignumber.js/-/bignumber.js-9.1.2.tgz 1ms (cache hit)
+235 http cache ethereum-cryptography@https://registry.npmjs.org/ethereum-cryptography/-/ethereum-cryptography-2.2.1.tgz 0ms (cache hit)
+236 http cache axios@https://registry.npmjs.org/axios/-/axios-1.18.0.tgz 0ms (cache hit)
+237 http cache tronweb@https://registry.npmjs.org/tronweb/-/tronweb-6.4.0.tgz 0ms (cache hit)
+238 http cache @babel/runtime@https://registry.npmjs.org/@babel/runtime/-/runtime-7.26.10.tgz 0ms (cache hit)
+239 http cache mime-db@https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz 0ms (cache hit)
+240 http cache mime-types@https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz 0ms (cache hit)
+241 http cache @noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.3.2.tgz 0ms (cache hit)
+242 http cache @noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.2.0.tgz 0ms (cache hit)
+243 silly tarball no local data for agent-base@https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz. Extracting by manifest.
+244 silly tarball no local data for delayed-stream@https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz. Extracting by manifest.
+245 silly tarball no local data for has-tostringtag@https://registry.npmjs.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz. Extracting by manifest.
+246 silly tarball no local data for es-set-tostringtag@https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz. Extracting by manifest.
+247 silly tarball no local data for combined-stream@https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz. Extracting by manifest.
+248 silly tarball no local data for asynckit@https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz. Extracting by manifest.
+249 silly tarball no local data for tslib@https://registry.npmjs.org/tslib/-/tslib-2.7.0.tgz. Extracting by manifest.
+250 silly tarball no local data for ws@https://registry.npmjs.org/ws/-/ws-8.17.1.tgz. Extracting by manifest.
+251 silly tarball no local data for undici-types@https://registry.npmjs.org/undici-types/-/undici-types-6.19.8.tgz. Extracting by manifest.
+252 silly tarball no local data for aes-js@https://registry.npmjs.org/aes-js/-/aes-js-4.0.0-beta.5.tgz. Extracting by manifest.
+253 silly tarball no local data for @types/node@https://registry.npmjs.org/@types/node/-/node-22.7.5.tgz. Extracting by manifest.
+254 silly tarball no local data for @scure/base@https://registry.npmjs.org/@scure/base/-/base-1.1.9.tgz. Extracting by manifest.
+255 silly tarball no local data for @adraffy/ens-normalize@https://registry.npmjs.org/@adraffy/ens-normalize/-/ens-normalize-1.10.1.tgz. Extracting by manifest.
+256 silly tarball no local data for @scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.3.0.tgz. Extracting by manifest.
+257 silly tarball no local data for @scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.4.0.tgz. Extracting by manifest.
+258 silly tarball no local data for @noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.4.0.tgz. Extracting by manifest.
+259 silly tarball no local data for @noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.4.2.tgz. Extracting by manifest.
+260 silly tarball no local data for proxy-from-env@https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-2.1.0.tgz. Extracting by manifest.
+261 silly tarball no local data for form-data@https://registry.npmjs.org/form-data/-/form-data-4.0.6.tgz. Extracting by manifest.
+262 silly tarball no local data for https-proxy-agent@https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz. Extracting by manifest.
+263 silly tarball no local data for follow-redirects@https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.16.0.tgz. Extracting by manifest.
+264 silly tarball no local data for regenerator-runtime@https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz. Extracting by manifest.
+265 silly tarball no local data for validator@https://registry.npmjs.org/validator/-/validator-13.15.23.tgz. Extracting by manifest.
+266 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-7.7.1.tgz. Extracting by manifest.
+267 silly tarball no local data for google-protobuf@https://registry.npmjs.org/google-protobuf/-/google-protobuf-3.21.4.tgz. Extracting by manifest.
+268 silly tarball no local data for eventemitter3@https://registry.npmjs.org/eventemitter3/-/eventemitter3-5.0.1.tgz. Extracting by manifest.
+269 silly tarball no local data for ethers@https://registry.npmjs.org/ethers/-/ethers-6.13.5.tgz. Extracting by manifest.
+270 silly tarball no local data for bignumber.js@https://registry.npmjs.org/bignumber.js/-/bignumber.js-9.1.2.tgz. Extracting by manifest.
+271 silly tarball no local data for ethereum-cryptography@https://registry.npmjs.org/ethereum-cryptography/-/ethereum-cryptography-2.2.1.tgz. Extracting by manifest.
+272 silly tarball no local data for axios@https://registry.npmjs.org/axios/-/axios-1.18.0.tgz. Extracting by manifest.
+273 silly tarball no local data for tronweb@https://registry.npmjs.org/tronweb/-/tronweb-6.4.0.tgz. Extracting by manifest.
+274 silly tarball no local data for mime-db@https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz. Extracting by manifest.
+275 silly tarball no local data for @babel/runtime@https://registry.npmjs.org/@babel/runtime/-/runtime-7.26.10.tgz. Extracting by manifest.
+276 silly tarball no local data for mime-types@https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz. Extracting by manifest.
+277 silly tarball no local data for @noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.3.2.tgz. Extracting by manifest.
+278 silly tarball no local data for @noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.2.0.tgz. Extracting by manifest.
+279 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 662ms
+280 silly audit report {
+280 silly audit report   ws: [
+280 silly audit report     {
+280 silly audit report       id: 1119108,
+280 silly audit report       url: 'https://github.com/advisories/GHSA-58qx-3vcg-4xpx',
+280 silly audit report       title: 'ws: Uninitialized memory disclosure',
+280 silly audit report       severity: 'moderate',
+280 silly audit report       vulnerable_versions: '>=8.0.0 <8.20.1',
+280 silly audit report       cwe: [Array],
+280 silly audit report       cvss: [Object]
+280 silly audit report     },
+280 silly audit report     {
+280 silly audit report       id: 1122891,
+280 silly audit report       url: 'https://github.com/advisories/GHSA-96hv-2xvq-fx4p',
+280 silly audit report       title: 'ws: Memory exhaustion DoS from tiny fragments and data chunks',
+280 silly audit report       severity: 'high',
+280 silly audit report       vulnerable_versions: '>=8.0.0 <8.21.0',
+280 silly audit report       cwe: [Array],
+280 silly audit report       cvss: [Object]
+280 silly audit report     }
+280 silly audit report   ]
+280 silly audit report }
+281 silly packumentCache corgi:https://registry.npmjs.org/ws cache-miss
+282 http fetch GET 200 https://registry.npmjs.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz 792ms (cache miss)
+283 http fetch GET 200 https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz 789ms (cache miss)
+284 http fetch GET 200 https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz 827ms (cache miss)
+285 http fetch GET 200 https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz 849ms (cache miss)
+286 http fetch GET 200 https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz 837ms (cache miss)
+287 http fetch GET 200 https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-2.1.0.tgz 893ms (cache miss)
+288 http fetch GET 200 https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz 917ms (cache miss)
+289 http fetch GET 200 https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.16.0.tgz 950ms (cache miss)
+290 http fetch GET 200 https://registry.npmjs.org/form-data/-/form-data-4.0.6.tgz 1008ms (cache miss)
+291 http fetch GET 200 https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz 1062ms (cache miss)
+292 http fetch GET 200 https://registry.npmjs.org/eventemitter3/-/eventemitter3-5.0.1.tgz 1142ms (cache miss)
+293 http fetch GET 200 https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz 1240ms (cache miss)
+294 http fetch GET 200 https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz 1171ms (cache miss)
+295 http fetch GET 200 https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz 1166ms (cache miss)
+296 http fetch GET 200 https://registry.npmjs.org/@scure/bip32/-/bip32-1.4.0.tgz 1304ms (cache miss)
+297 http fetch GET 200 https://registry.npmjs.org/tslib/-/tslib-2.7.0.tgz 1378ms (cache miss)
+298 http fetch GET 200 https://registry.npmjs.org/bignumber.js/-/bignumber.js-9.1.2.tgz 1332ms (cache miss)
+299 http fetch GET 200 https://registry.npmjs.org/ws 1075ms (cache miss)
+300 silly packumentCache corgi:https://registry.npmjs.org/ws set size:undefined disposed:false
+301 http fetch GET 200 https://registry.npmjs.org/undici-types/-/undici-types-6.19.8.tgz 1722ms (cache miss)
+302 silly packumentCache corgi:https://registry.npmjs.org/ethers cache-miss
+303 http fetch GET 200 https://registry.npmjs.org/ws/-/ws-8.17.1.tgz 1916ms (cache miss)
+304 http fetch GET 200 https://registry.npmjs.org/google-protobuf/-/google-protobuf-3.21.4.tgz 2065ms (cache miss)
+305 http fetch GET 200 https://registry.npmjs.org/@scure/base/-/base-1.1.9.tgz 2156ms (cache miss)
+306 http fetch GET 200 https://registry.npmjs.org/semver/-/semver-7.7.1.tgz 2205ms (cache miss)
+307 http fetch GET 200 https://registry.npmjs.org/@adraffy/ens-normalize/-/ens-normalize-1.10.1.tgz 2419ms (cache miss)
+308 http fetch GET 200 https://registry.npmjs.org/ethers 793ms (cache miss)
+309 silly packumentCache corgi:https://registry.npmjs.org/ethers set size:undefined disposed:false
+310 http fetch GET 200 https://registry.npmjs.org/@scure/bip39/-/bip39-1.3.0.tgz 2614ms (cache miss)
+311 silly packumentCache corgi:https://registry.npmjs.org/tronweb cache-miss
+312 http fetch GET 200 https://registry.npmjs.org/ethereum-cryptography/-/ethereum-cryptography-2.2.1.tgz 2682ms (cache miss)
+313 http fetch GET 200 https://registry.npmjs.org/@types/node/-/node-22.7.5.tgz 2840ms (cache miss)
+314 http fetch GET 200 https://registry.npmjs.org/@noble/hashes/-/hashes-1.4.0.tgz 3053ms (cache miss)
+315 http fetch GET 200 https://registry.npmjs.org/@noble/hashes/-/hashes-1.3.2.tgz 3029ms (cache miss)
+316 http fetch GET 200 https://registry.npmjs.org/aes-js/-/aes-js-4.0.0-beta.5.tgz 3137ms (cache miss)
+317 http fetch GET 200 https://registry.npmjs.org/axios/-/axios-1.18.0.tgz 3276ms (cache miss)
+318 http fetch GET 200 https://registry.npmjs.org/@noble/curves/-/curves-1.2.0.tgz 3321ms (cache miss)
+319 http fetch GET 200 https://registry.npmjs.org/@noble/curves/-/curves-1.4.2.tgz 3494ms (cache miss)
+320 http fetch GET 200 https://registry.npmjs.org/@babel/runtime/-/runtime-7.26.10.tgz 3651ms (cache miss)
+321 http fetch GET 200 https://registry.npmjs.org/validator/-/validator-13.15.23.tgz 3715ms (cache miss)
+322 http fetch GET 200 https://registry.npmjs.org/tronweb 2893ms (cache miss)
+323 silly packumentCache corgi:https://registry.npmjs.org/tronweb set size:undefined disposed:false
+324 http fetch GET 200 https://registry.npmjs.org/tronweb/-/tronweb-6.4.0.tgz 6405ms (cache miss)
+325 http fetch GET 200 https://registry.npmjs.org/ethers/-/ethers-6.13.5.tgz 7455ms (cache miss)
+326 silly ADD node_modules/agent-base
+327 silly ADD node_modules/has-tostringtag
+328 silly ADD node_modules/delayed-stream
+329 silly ADD node_modules/es-set-tostringtag
+330 silly ADD node_modules/combined-stream
+331 silly ADD node_modules/asynckit
+332 silly ADD node_modules/undici-types
+333 silly ADD node_modules/ws
+334 silly ADD node_modules/tslib
+335 silly ADD node_modules/aes-js
+336 silly ADD node_modules/@types/node
+337 silly ADD node_modules/@adraffy/ens-normalize
+338 silly ADD node_modules/@scure/base
+339 silly ADD node_modules/@scure/bip39
+340 silly ADD node_modules/@scure/bip32
+341 silly ADD node_modules/@noble/hashes
+342 silly ADD node_modules/@noble/curves
+343 silly ADD node_modules/proxy-from-env
+344 silly ADD node_modules/https-proxy-agent
+345 silly ADD node_modules/form-data
+346 silly ADD node_modules/form-data/node_modules/mime-db
+347 silly ADD node_modules/form-data/node_modules/mime-types
+348 silly ADD node_modules/follow-redirects
+349 silly ADD node_modules/regenerator-runtime
+350 silly ADD node_modules/validator
+351 silly ADD node_modules/semver
+352 silly ADD node_modules/google-protobuf
+353 silly ADD node_modules/eventemitter3
+354 silly ADD node_modules/ethers
+355 silly ADD node_modules/ethers/node_modules/@noble/hashes
+356 silly ADD node_modules/ethers/node_modules/@noble/curves
+357 silly ADD node_modules/ethereum-cryptography
+358 silly ADD node_modules/bignumber.js
+359 silly ADD node_modules/axios
+360 silly ADD node_modules/@babel/runtime
+361 silly ADD node_modules/tronweb
+362 verbose cwd /data/data/com.termux/files/home
+363 verbose os Linux 5.15.178-android13-8-00007-g362d545d31a5-ab14608873
+364 verbose node v26.3.1
+365 verbose npm  v11.17.0
+366 verbose exit 0
+367 info ok

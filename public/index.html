@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>USDT Wallet</title>
+
+<style>
+body{
+background:#111;
+color:white;
+font-family:Arial;
+text-align:center;
+padding-top:40px;
+}
+
+.box{
+background:#222;
+padding:20px;
+margin:20px;
+border-radius:12px;
+}
+
+button{
+background:#00c853;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:8px;
+font-size:18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>USDT Deposit</h1>
+
+<div class="box">
+<h3>Network: TRC20</h3>
+
+<p id="wallet">Loading...</p>
+
+<button onclick="copy()">Copy Address</button>
+
+</div>
+
+<script>
+
+fetch("/wallet")
+.then(r=>r.json())
+.then(data=>{
+document.getElementById("wallet").innerText=data.address;
+});
+
+function copy(){
+
+navigator.clipboard.writeText(
+document.getElementById("wallet").innerText
+);0
+
+alert("Address Copied");
+
+}
+
+</script>
+
+</body>
+</html>
+
