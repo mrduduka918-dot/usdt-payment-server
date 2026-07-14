@@ -1,8 +1,3 @@
-const express = require("express");
-const app = express();
-
-const wallet = "TJe8Dyt3kNNTsaz1N9DTMULWobhQZVnV1j";
-const amount = 10;
 
 let payments = [];
 
@@ -21,16 +16,7 @@ body{
 }
 img{
     width:250px;
-    height:250px;
-}
-.address{
-    word-break:break-all;
-    margin:15px;
-}
-button{
-    padding:12px 20px;
-    font-size:16px;
-    margin:8px;
+    heightx;
     border:none;
     border-radius:8px;
     background:#0a8f08;
@@ -208,25 +194,5 @@ fetch("/reject/"+id).then(()=>location.reload());
 app.get("/approve/:id", (req, res) => {
     let id = parseInt(req.params.id);
 
-    if (payments[id]) {
-        payments[id].status = "Approved";
-    }
-
-    res.send("OK");
-});
-
-app.get("/reject/:id", (req, res) => {
-    let id = parseInt(req.params.id);
-
-    if (payments[id]) {
-        payments[id].status = "Rejected";
-    }
-
-    res.send("OK");
-});
-
-app.listen(3000, () => {
-    console.log("Server Started");
-});
-
+    if (payments[id]) 
 
