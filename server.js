@@ -1,135 +1,87 @@
 const express = require("express");
 const QRCode = require("qrcode");
+const { createClient } = require("@supabase/supabase-js");
 
 const app = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const WALLET = "TJe8Dyt3kNNTsaz1N9DTMULWobhQZVnV1j";
-const AMOUNT = 10;
+const AMOUNT = "10";
 const NETWORK = "TRC20";
 const ADMIN_PASSWORD = "123456";
 
-let payments = [];
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY
+);
 
 app.get("/", async (req, res) => {
+  const qr = await QRCode.toDataURL(WALLET);
 
-    const qr = await QRCode.toDataURL(WALLET);
-
-    res.send(`
+  res.send(`
 <!DOCTYPE html>
 <html>
 <head>
 <title>USDT Payment</title>
-
 <style>
-body{
-font-family:Arial;
-text-align:center;
-margin-top:30px;
-}
-
-button{
-padding:10px 18px;
-margin:5px;
-background:green;
-color:white;
-border:none;
-border-radius:5px;
-}
-
-img{
-width:220px;
-}
-
-input{
-width:320px;
-padding:8px;
-text-align:center;
-}
+body{font-family:Arial;text-align:center;margin-top:30px;}
+button{padding:10px 18px;margin:5px;background:green;color:#fff;border:none;border-radius:5px;}
+img{width:220px;}
+input{width:320px;padding:8px;text-align:center;}
 </style>
-
 </head>
-
 <body>
 
 <h2>USDT Payment</h2>
-
 <h3>${AMOUNT} USDT</h3>
-
 <p>Network : ${NETWORK}</p>
 
-<img src="${qr}">
+<img src="${qr}"><br><br>
 
-<br><br>
-
-<input id="wallet" value="${WALLET}" readonly>
-
-<br><br>
+<input id="wallet" value="${WALLET}" readonly><br><br>
 
 <button onclick="copyWallet()">Copy Address</button>
-
 <button onclick="location='/paid'">I Have Paid</button>
 
 <script>
-
 function copyWallet(){
-
 navigator.clipboard.writeText(document.getElementById("wallet").value);
-
 alert("Wallet Copied");
-
 }
-
 </script>
 
 </body>
 </html>
 `);
 });
-app.get("/paid",(req,res)=>{
 
-payments.push({
-id:Date.now(),
-wallet:WALLET,
-amount:AMOUNT,
-network:NETWORK,
-status:"Pending",
-time:new Date().toLocaleString()
-});
+app.get("/paid", async (req, res) => {
 
-res.send(`
+  await supabase.from("payments").insert([
+    {
+      wallet: WALLET,
+      amount: AMOUNT,
+      network: NETWORK,
+      status: "Pending"
+    }
+  ]);
+
+  res.send(`
 <!DOCTYPE html>
 <html>
 <head>
 <title>Payment Submitted</title>
 <style>
-body{
-font-family:Arial;
-text-align:center;
-margin-top:80px;
-}
-.box{
-display:inline-block;
-padding:25px;
-border:1px solid #ccc;
-border-radius:10px;
-}
-button{
-padding:10px 20px;
-background:green;
-color:#fff;
-border:none;
-border-radius:5px;
-}
+body{font-family:Arial;text-align:center;margin-top:80px;}
+.box{display:inline-block;padding:25px;border:1px solid #ccc;border-radius:10px;}
+button{padding:10px 20px;background:green;color:#fff;border:none;border-radius:5px;}
 </style>
 </head>
 <body>
 
 <div class="box">
-
 <h2>✅ Payment Submitted</h2>
-
 <p>Your payment is waiting for verification.</p>
 
 <button onclick="location='/admin'">
@@ -143,105 +95,81 @@ Open Admin
 `);
 });
 
-app.get("/admin",(req,res)=>{
+app.get("/admin", async (req, res) => {
 
 if(req.query.password!==ADMIN_PASSWORD){
 
 return res.send(`
-<!DOCTYPE html>
-<html>
-<head>
-<title>Admin Login</title>
-<style>
-body{
-font-family:Arial;
-text-align:center;
-margin-top:100px;
-}
-input{
-padding:10px;
-width:250px;
-}
-button{
-padding:10px 20px;
-margin-top:10px;
-}
-</style>
-</head>
-
-<body>
-
 <h2>Admin Login</h2>
 
-<form action="/admin" method="GET">
+<form>
 
 <input
 type="password"
 name="password"
-placeholder="Password"
-required>
+placeholder="Password">
 
-<br><br>
-
-<button type="submit">
+<button>
 Login
 </button>
 
 </form>
 
-</body>
-</html>
+<script>
+document.querySelector("form").method="GET";
+document.querySelector("form").action="/admin";
+</script>
 `);
 }
 
-let rows=payments.map((p,i)=>`
+const { data } = await supabase
+.from("payments")
+.select("*")
+.order("id",{ascending:true});
+
+let rows="";
+
+data.forEach((p)=>{
+
+rows+=`
 <tr>
-<td>${i+1}</td>
+<td>${p.id}</td>
 <td>${p.wallet}</td>
 <td>${p.amount} USDT</td>
 <td>${p.network}</td>
-<td>${p.time}</td>
+<td>${new Date(p.time).toLocaleString()}</td>
 <td>${p.status}</td>
+
 <td>
-<button onclick="location='/approve/${i}?password=${ADMIN_PASSWORD}'">
+
+<button onclick="location='/approve/${p.id}?password=${ADMIN_PASSWORD}'">
 Approve
 </button>
 
-<button onclick="location='/reject/${i}?password=${ADMIN_PASSWORD}'">
+<button onclick="location='/reject/${p.id}?password=${ADMIN_PASSWORD}'">
 Reject
 </button>
+
 </td>
 </tr>
-`).join("");
+`;
+
+});
 
 res.send(`
 <!DOCTYPE html>
 <html>
 <head>
-<title>Admin Panel</title>
+<title>Admin</title>
 
 <style>
-body{
-font-family:Arial;
-padding:20px;
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-}
-
-th,td{
-border:1px solid #ccc;
-padding:10px;
-text-align:center;
-}
-
-th{
-background:#222;
-color:white;
-}
+body{font-family:Arial;padding:20px;}
+table{width:100%;border-collapse:collapse;}
+th,td{border:1px solid #ccc;padding:10px;text-align:center;}
+th{background:#222;color:#fff;}
 </style>
+
+</head>
 
 <body>
 
@@ -250,7 +178,7 @@ color:white;
 <table>
 
 <tr>
-<th>No</th>
+<th>ID</th>
 <th>Wallet</th>
 <th>Amount</th>
 <th>Network</th>
@@ -262,46 +190,42 @@ color:white;
 ${rows}
 
 </table>
+
+</body>
+</html>
 `);
 });
-app.get("/approve/:id", (req, res) => {
 
-    if (req.query.password !== ADMIN_PASSWORD) {
-        return res.send("Access Denied");
-    }
+app.get("/approve/:id", async (req,res)=>{
 
-    const id = parseInt(req.params.id);
+if(req.query.password!==ADMIN_PASSWORD){
+return res.send("Access Denied");
+}
 
-    if (payments[id]) {
-        payments[id].status = "Approved";
-    }
+await supabase
+.from("payments")
+.update({status:"Approved"})
+.eq("id",req.params.id);
 
-    res.redirect("/admin?password=" + ADMIN_PASSWORD);
-
-});
-
-app.get("/reject/:id", (req, res) => {
-
-    if (req.query.password !== ADMIN_PASSWORD) {
-        return res.send("Access Denied");
-    }
-
-    const id = parseInt(req.params.id);
-
-    if (payments[id]) {
-        payments[id].status = "Rejected";
-    }
-
-    res.redirect("/admin?password=" + ADMIN_PASSWORD);
+res.redirect("/admin?password="+ADMIN_PASSWORD);
 
 });
 
-app.listen(PORT, () => {
-    console.log("==================================");
-    console.log("USDT Payment Server Started");
-    console.log("Home  : http://localhost:3000/");
-    console.log("Admin : http://localhost:3000/admin");
-    console.log("Password :", ADMIN_PASSWORD);
-    console.log("==================================");
+app.get("/reject/:id", async (req,res)=>{
+
+if(req.query.password!==ADMIN_PASSWORD){
+return res.send("Access Denied");
+}
+
+await supabase
+.from("payments")
+.update({status:"Rejected"})
+.eq("id",req.params.id);
+
+res.redirect("/admin?password="+ADMIN_PASSWORD);
+
 });
 
+app.listen(PORT,()=>{
+console.log("Server Started");
+});
