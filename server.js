@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const WALLET = "TJe8Dyt3kNNTsaz1N9DTMULWobhQZVnV1j";
-const AMOUNT = "10";
+const AMOUNT = "100";
 const NETWORK = "TRC20";
 const ADMIN_PASSWORD = "123456";
 
