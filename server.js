@@ -95,7 +95,28 @@ alert("Wallet Copied");
 </html>
 `);
 });
+app.post("/paid", async (req, res) => {
 
+  const { txid } = req.body;
+
+  const { error } = await supabase
+    .from("payments")
+    .insert([
+      {
+        wallet: WALLET,
+        amount: AMOUNT,
+        network: NETWORK,
+        txid: txid,
+        status: "Pending"
+      }
+    ]);
+
+  if (error) {
+    return res.send("Database Error: " + error.message);
+  }
+
+  res.send("Payment submitted successfully.");
+});
 app.listen(PORT, () => {
   console.log("Server Running On Port", PORT);
 });
