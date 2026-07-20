@@ -1,5 +1,47 @@
 app.get("/signup", (req, res) => {
+app.post("/signup", async (req, res) => {
 
+  const { name, email, password } = req.body;
+
+  // Check if email already exists
+  const { data: existingUser } = await supabase
+    .from("users")
+    .select("id")
+    .eq("email", email)
+    .single();
+
+  if (existingUser) {
+    return res.send("<h2>Email already registered.</h2>");
+  }
+
+  // Hash password
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  // Save user
+  const { error } = await supabase
+    .from("users")
+    .insert([
+      {
+        name: name,
+        email: email,
+        password: hashedPassword,
+        balance: 0
+      }
+    ]);
+
+  if (error) {
+    return res.send("<h2>Signup Failed</h2><p>" + error.message + "</p>");
+  }
+
+  res.send(`
+    <h2>✅ Account Created Successfully</h2>
+
+    <a href="/login">
+      Login Now
+    </a>
+  `);
+
+});
 res.send(`
 <!DOCTYPE html>
 <html>
