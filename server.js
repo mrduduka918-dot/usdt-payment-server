@@ -1,3 +1,90 @@
+app.get("/signup", (req, res) => {
+
+res.send(`
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Signup</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f4f4;
+text-align:center;
+margin-top:40px;
+}
+
+.card{
+background:white;
+width:380px;
+margin:auto;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px #ccc;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:10px;
+box-sizing:border-box;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:10px;
+background:#16a34a;
+color:white;
+border:none;
+border-radius:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Create Account</h2>
+
+<form method="POST" action="/signup">
+
+<input
+name="name"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email"
+required>
+
+<input
+type="password"
+name="password"
+placeholder="Password"
+required>
+
+<button type="submit">
+Create Account
+</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
+`);
+
+});
 require("dotenv").config();
 
 const express = require("express");
