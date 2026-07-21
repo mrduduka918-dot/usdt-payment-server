@@ -5,6 +5,7 @@ const express = require("express");
 const QRCode = require("qrcode");
 const { createClient } = require("@supabase/supabase-js");
 const bcrypt = require("bcrypt");
+const authRoutes = require("./routes/auth");
 
 const app = express();
 
