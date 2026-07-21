@@ -5,13 +5,11 @@ const express = require("express");
 const QRCode = require("qrcode");
 const { createClient } = require("@supabase/supabase-js");
 const bcrypt = require("bcrypt");
-const authRoutes = require("./routes/auth");
 
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/", authRoutes);
 
 const PORT = process.env.PORT || 3000;
 
