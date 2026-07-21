@@ -1,1 +1,37 @@
+body{
+background:#f4f4f4;
+font-family:Arial;
+}
 
+.card{
+width:380px;
+margin:50px auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:10px;
+box-sizing:border-box;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:15px;
+background:#16a34a;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+a{
+text-decoration:none;
+color:#16a34a;
+}
