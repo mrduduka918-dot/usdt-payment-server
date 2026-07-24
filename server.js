@@ -109,6 +109,28 @@ Create Account
 `);
 
 });
+app.post("/signup", async (req, res) => {
+  const { name, email, password } = req.body;
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  const { error } = await supabase
+    .from("users")
+    .insert([
+      {
+        name,
+        email,
+        password: hashedPassword,
+        balance: 0
+      }
+    ]);
+
+  if (error) {
+    return res.send("<h2>Signup Failed</h2><p>" + error.message + "</p>");
+  }
+
+  res.redirect("/login");
+});
 // Home page
 app.get("/", async (req, res) => {
   const qr = await QRCode.toDataURL(WALLET);
